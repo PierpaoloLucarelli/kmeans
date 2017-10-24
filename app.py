@@ -14,9 +14,6 @@ clusters = [[] for i in range(K)]
 x = np.random.rand(N)
 y = np.random.rand(N)
 
-# plt.scatter(x, y, s=area, c=colors, alpha=0.5)
-# plt.show()
-
 
 # plot the data
 def plot_data(clusters):
@@ -49,17 +46,10 @@ def kmeans(centroids, dists):
 		# assign each point to the closest cluster
 		asign_to_closest_cluster(dists, data, clusters)
 		dists = []
-		# print(clusters[0])
 
 		for i in range(K):
 			mean = get_mean(clusters[i])
-			# print("mean")
-			# print(clusters[i])
 			new_centroids.append((mean))
-		# print("centr")
-		# print(centroids)
-		# print("new cent")
-		# print(new_centroids)
 		return clusters
 
 			
@@ -96,11 +86,6 @@ def init_data():
 	for i in range(N):
 		data.append((x[i],y[i]))
 
-# def reset_clusters():
-# 	print("resetting")
-# 	clusters = [[] for i in range(K)]
-# 	print(clusters)
-
 def converged(c1,c2):
 	if len(c2) < 1:
 		return False
@@ -112,16 +97,5 @@ def converged(c1,c2):
 
 init_data()
 clusters = kmeans(centroids, dists)
-print(clusters)
 plot_data(clusters)
-
-
-
-
-# p1 = [(1,5), (,6), (3,6)]
-# p2 = [(1,5), (2,6), (3,6)]
-# print(converged(p1,p2))
-# c = (1,5)
-# d = distances(c,p1)
-# print(d)
 
