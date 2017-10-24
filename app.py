@@ -34,7 +34,6 @@ def kmeans(centroids, dists):
 
 	# calc distance from points to centroids
 	while not (converged(centroids,new_centroids)):
-		print("looping")
 		centroids = new_centroids[:]
 		new_centroids = []
 		for i in range(K):
