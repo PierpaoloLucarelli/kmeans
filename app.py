@@ -95,6 +95,12 @@ def converged(c1,c2):
 
 
 init_data()
+
+# displaying raw data
+plt.scatter(x,y, color='k', s=25, marker="o")
+
 clusters = kmeans(centroids, dists)
+
+# displaying clustered data
 plot_data(clusters)
 
