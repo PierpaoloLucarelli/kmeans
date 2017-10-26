@@ -6,9 +6,9 @@ import math
 
 N = 50
 data = []
-K = 3
+K = 6
 centroids = []
-colors = ['r','g','b']
+colors = ['b','g','r','c','m','y','k']
 dists = []
 clusters = [[] for i in range(K)]
 x = np.random.rand(N)
